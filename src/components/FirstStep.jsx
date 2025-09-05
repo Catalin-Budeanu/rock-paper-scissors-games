@@ -1,4 +1,3 @@
-import React from 'react';
 import paper from '../assets/paper.svg';
 import rock from '../assets/rock.svg';
 import scissors from '../assets/scissors.svg';
@@ -8,9 +7,8 @@ const playerOptions = ['rock', 'paper', 'scissors'];
 //                       0        1          2
 
 const getRandomOption = () => {
-  // 1. genereaza un numar random din lista: 0, 1 sau 2
   const number = Math.floor(Math.random() * 3);
-  // 2. foloseste numarul pe post de index ca sa returnezi elementul din playerOptions care sta pe acel index
+
   return playerOptions[number];
 };
 

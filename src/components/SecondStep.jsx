@@ -1,4 +1,3 @@
-import React from 'react';
 import paper from '../assets/paper.svg';
 import rock from '../assets/rock.svg';
 import scissors from '../assets/scissors.svg';
@@ -16,8 +15,6 @@ const SecondStep = ({ currentGame, handleReset }) => {
         <div className="option-card">
           <img src={getSelectedOptionImage(currentGame.selectedOption)} />
           <h3>You picked</h3>
-          {/* --- varianta 2 --- */}
-          {/* <img src={icons[selectedOption]} /> */}
         </div>
         <div className="option-card">
           <img src={getSelectedOptionImage(currentGame.houseChoice)} />

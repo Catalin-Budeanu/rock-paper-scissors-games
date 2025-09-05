@@ -1,4 +1,3 @@
-// hooks
 import { useEffect, useState } from 'react';
 import title from './assets/title.svg';
 import rules from './assets/rules.svg';
@@ -16,15 +15,8 @@ const initialGame = {
 const App = () => {
   let [currentGame, setCurrentGame] = useState(initialGame);
 
-  // varianta 2
   const initialGamesWon = localStorage.getItem('score') || 0;
   let [gamesWon, setGamesWon] = useState(initialGamesWon);
-
-  // varianta 1
-  // const initialGamesWon = localStorage.getItem('score');
-  // let [gamesWon, setGamesWon] = useState(
-  //   initialGamesWon !== null ? Number(initialGamesWon) : 0
-  // );
 
   useEffect(() => {
     localStorage.getItem('score', gamesWon);
@@ -75,9 +67,5 @@ const App = () => {
     </>
   );
 };
-
-// Cum se executa getSelectedOptionImage(getRandomOption())
-// 1. Se executa functia getRandomOption
-// 2. Se executa functia getSelectedOptionImage
 
 export default App;
